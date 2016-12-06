@@ -1,0 +1,16 @@
+book:
+ISBN
+title
+author
+publisher
+description
+category
+language
+location
+price
+numberOfCopies
+url
+shippingWeight
+
+
+

@@ -33,3 +33,7 @@ iron:router
 accounts-ui
 
 useraccounts:materialize
+aldeed:autoform
+aldeed:simple-schema
+
+aldeed:collection2
