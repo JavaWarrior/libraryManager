@@ -1,0 +1,10 @@
+<template name="MainLayout">
+
+		{{#if currentUser}}
+			{{> mainBar}}
+			{{> yield}}
+		{{else}}
+			{{> login}}
+		{{/if}}
+	
+</template>
