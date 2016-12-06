@@ -1,5 +1,20 @@
 <template name='adminBorrows' >
-<div class =' card-panel lighten-4'>
-	<p> list of borrowings </p>
+<div class ='row'>
+	<div class='col s12'>
+		<ul class="tabs">
+			<li class="tab"><a class = 'active' href="#addBorrows">add borrow-</a></li>
+			<li class="tab"><a class = 'active' href="#approvedBorrows">approved books-</a></li>
+			<li class="tab"><a href="#unApprovedBorrows">unapproved books</a></li>
+		</ul>
+	</div>
+	<div id="addBorrows" class="col s12">
+		{{>addBorrow}}
+	</div>
+	<div id="approvedBorrows" class="col s12">
+		{{>displayApproved}}
+	</div>
+	<div id="unApprovedBorrows" class="col s12">
+		{{>displayUnapproved}}
+	</div>
 </div>
 </template>
