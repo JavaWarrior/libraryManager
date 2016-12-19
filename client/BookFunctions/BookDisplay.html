@@ -3,3 +3,24 @@
 		{{> quickForm collection="Books" doc=this id="updateBookForm" type="update"}}
 	</div>
 </template>
+
+<template name = 'UserBookDisplay'>
+	<div class='card-panel'>
+		{{#autoForm collection="Books" doc=this id="updateBookForm" type="readonly"}}
+    <fieldset>
+      <legend>Display a book</legend>
+      {{> afQuickField name='title'}}
+      {{> afQuickField name='author'}}
+      {{> afQuickField name='summary'}}
+      {{> afQuickField name='ISBN'}}
+      {{> afQuickField name='publisher'}}
+      {{> afQuickField name='shippingWeight'}}
+      {{> afQuickField name='Location'}}
+      {{> afQuickField name='category'}}
+    </fieldset>
+	<button type="submit" class="btn btn-primary">Buy</button>
+	<button type="submit" class="btn btn-primary">Borrow</button>
+
+  {{/autoForm}}
+	</div>
+</template>
