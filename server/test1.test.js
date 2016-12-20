@@ -55,12 +55,6 @@ describe('test books insert/update', function(){
 			x = 4
 		} finally{chai.assert.equal(x,4)}
 		try{
-			Books.insert({title:'book1', copies: 0, ISBN: '1234567981234', price: 20, category: 'science'})
-		} catch(err){
-			chai.assert.equal(err.sanitizedError.error, 400)
-			x = 5
-		} finally{chai.assert.equal(x,5)}
-		try{
 			Books.insert({title:'book1', copies: 0, ISBN: '1234567981234', price: 20, Location: 'row 12 col 1'})
 		} catch(err){
 			chai.assert.equal(err.sanitizedError.error, 400)
@@ -228,7 +222,7 @@ describe('test borrows insert/update', function(){
 })
 
 
-describe('test borrows insert/update', function(){
+describe('test member insert/update', function(){
 	beforeEach(function(){
 		resetDatabase();
 	});

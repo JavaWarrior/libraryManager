@@ -1,10 +1,10 @@
-Template.displayApproved.helpers({
+Template.displayUserBorrows.helpers({
 	selector(){
-		//return {borrower: Meteor.userId()};
+		return {borrower: Meteor.user().emails[0].address};
 	}
 })
 
 
-Template.displayApproved.onRendered(function (){
+Template.displayUserBorrows.onRendered(function (){
 	$('select').material_select();
 })

@@ -1,5 +1,15 @@
 <template name='addMember'>
 	<div class ='card-panel lighten-4'>
-		{{> quickForm validation='keyup' collection="Members" id="insertMemberForm" type="insert"}}
-	</div>
+		{{> quickForm validation='keyup' collection="Meteor.users" id="insertMemberForm" type="insert"}}
+	
+	<!-- {{#autoForm collection="Meteor.users" id="insertMemberForm" type='insert'}}
+		<fieldset>
+			<legend>Add a Member</legend>
+			{{#afEachArrayItem name='emails'}}
+				{{> afQuickField name=this.current.address}}
+			{{/afEachArrayItem}}
+			</fieldset>
+		<button type="submit" class="btn btn-primary">Insert</button>
+	{{/autoForm}} --> 	
+ 	</div>
 </template>
